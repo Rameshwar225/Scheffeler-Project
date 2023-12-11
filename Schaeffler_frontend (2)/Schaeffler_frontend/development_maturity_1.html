@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Project Team Panel - Project Status Tracking System</title>
+    <link rel="stylesheet" type="text/css" href="development_maturity_1.css">
+</head>
+
+<body>
+    <!-- <div class="logo">
+        <img src="logoS5.png" alt="Logo">
+    </div> -->
+    <div class="panel-container">
+        <h2>
+            Project Number - Project Name
+        </h2>
+        <h3>Development Maturity</h3>
+
+        <!-- <h4>Overall Status</h4> -->
+        <table id="1">
+            <tr>
+                <th>Overall Status</th>
+
+            </tr>
+            <tr>
+                <td>
+                    <div class="status-container">
+                        <input type="radio" class="status-radio" name="status" id="green">
+                        <label class="status-option" for="green">
+                            <div class="status-indicator" id="green"></div>
+                        </label>
+                        <input type="radio" class="status-radio" name="status" id="yellow">
+                        <label class="status-option" for="yellow">
+                            <div class="status-indicator" id="yellow"></div>
+                        </label>
+                        <input type="radio" class="status-radio" name="status" id="red">
+                        <label class="status-option" for="red">
+                            <div class="status-indicator" id="red"></div>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="status-box">
+            <div class="status-light green"></div>
+            <div class="status-light yellow"></div>
+            <div class="status-light red"></div>
+        </div>
+        <!-- <table id="status-table"> -->
+            <table id="status-table">
+        <thead>
+          <tr>
+            <th>Domain</th>
+            <th>Topic</th>
+            <th>Measures</th>
+            <th>Responsible</th>
+            <th>Due Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-domain="SYS">
+            <td>SYS</td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td class="status-cell">
+              <div
+                class="status-circle"
+                data-status="red"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="green"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="yellow"
+              ></div>
+            </td>
+          </tr>
+          <tr data-domain="SW">
+            <td>SW</td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td class="status-cell">
+              <div
+                class="status-circle"
+                data-status="red"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="green"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="yellow"
+              ></div>
+            </td>
+          </tr>
+          <tr data-domain="HW">
+            <td>HW</td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td class="status-cell">
+              <div
+                class="status-circle"
+                data-status="red"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="green"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="yellow"
+              ></div>
+            </td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    </div>
+    <script src="project-team-panel.js"></script>
+    <script >
+        document.addEventListener('DOMContentLoaded', function () {
+    var sysCircles = document.querySelectorAll('[data-domain="SYS"] .status-circle');
+    var swCircles = document.querySelectorAll('[data-domain="SW"] .status-circle');
+    var hwCircles = document.querySelectorAll('[data-domain="HW"] .status-circle');
+
+    function resetCircles(circles) {
+        circles.forEach(function (circle) {
+            circle.style.backgroundColor = ''; // Set background color to empty (default)
+        });
+    }
+
+    function handleCircleClick(circles) {
+        circles.forEach(function (circle) {
+            circle.addEventListener('click', function () {
+                resetCircles(circles); // Reset all circles within the same domain
+
+                // Set the clicked circle to be filled with color
+                switch (circle.getAttribute('data-status')) {
+                    case 'red':
+                        circle.style.backgroundColor = 'red';
+                        break;
+                    case 'green':
+                        circle.style.backgroundColor = 'green';
+                        break;
+                    case 'yellow':
+                        circle.style.backgroundColor = 'yellow';
+                        break;
+                }
+            });
+        });
+    }
+
+    handleCircleClick(sysCircles);
+    handleCircleClick(swCircles);
+    handleCircleClick(hwCircles);
+});
+
+    </script>
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+/* Add CSS for the important points table */
+h1 {
+    font-size: 24px;
+    color: black;
+}
+
+h2 {
+    font-size: 24px;
+    color: green;
+}
+
+.important-points-table {
+    width: 35%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.important-points-table th {
+    background-color: #f0f0f0;
+    text-align: left;
+    padding: 10px;
+}
+
+.important-points-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.important-points-table .important {
+    font-weight: bold;
+}
+
+.spl-table {
+    width: 20%;
+    margin-top: 40px;
+    margin-left: 0%;
+    /* Add this line to move the table to the right */
+}
+
+.spl-table th {
+    background-color: #f0f0f0;
+    text-align: left;
+    padding: 10px;
+}
+
+.spl-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.spl-table h2 {
+    margin: 0;
+}
+
+/* Add CSS for the Overall Status table */
+.status-container {
+    display: flex;
+
+}
+
+.status-radio:checked+.status-option .status-indicator {
+    border: 2px solid #ccc;
+    /* Fixed grey border */
+}
+
+.status-option {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.status-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 2px solid #ccc;
+    /* Fixed grey border */
+}
+
+.status-radio:checked+.status-option .status-indicator {
+    background-color: transparent;
+    /* Clear the background color when selected */
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 5px;
+}
+
+#green:checked+.status-option .status-indicator {
+    background-color: green;
+    border: 1px solid #ccc;
+    /* Grey border */
+
+}
+
+#yellow:checked+.status-option .status-indicator {
+    background-color: yellow;
+    border: 1px solid #ccc;
+    /* Grey border */
+
+}
+
+#red:checked+.status-option .status-indicator {
+    background-color: red;
+    border: 1px solid #ccc;
+    /* Grey border */
+
+}
+
+.status-radio {
+    display: none;
+}
+
+/* Your existing CSS styles */
+
+/* Add CSS for the right-corner box container */
+.box-container {
+    position: absolute;
+    top: 20px;
+    /* Adjust top position as needed */
+    right: 20px;
+    /* Adjust right position as needed */
+}
+
+/* Styles for the right-corner box */
+.right-corner-box {
+    width: 600px;
+    /* Specify the width as needed */
+    height: 500px;
+    /* Specify the height as needed */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+

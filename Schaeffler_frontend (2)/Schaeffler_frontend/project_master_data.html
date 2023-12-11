@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Panel - Project Status Tracking System</title>
+    <link rel="stylesheet" type="text/css" href="project_master_data.css">
+</head>
+
+<body>
+    <!-- <div class="logo">
+        <img src="logoS5.png" alt="Logo">
+    </div> -->
+    <div class="admin-container">
+        
+        <div class="product-image">
+            
+
+
+            <h2>Upload Image</h2>
+            <label for="image-upload" class="image-label">Product Image</label>
+            <div class="image-box">
+                <input type="file" id="image-upload" accept="image/*" onchange="previewImage(this)">
+                <img id="image-preview" src="placeholder.jpg" alt="Product Image">
+            </div>
+        </div>
+        <div class="admin-content">
+            <h2>Summary</h2>
+            <form id="summary-form">
+                <table>
+                    
+                    <tr>
+                        <td class="summary-field">Project Number</td>
+                        <td><input type="text" id="project-number" name="project-number"></td>
+                    </tr>
+                    <tr>
+                        <td class="summary-field">Project Name</td>
+                        <td><input type="text" id="project-name" name="project-name"></td>
+                    </tr>
+                    <tr>
+                        <td class="summary-field">Project Manager</td>
+                        <td><input type="text" id="project-manager" name="project-manager"></td>
+                    </tr>
+                    <tr>
+                        <td class="summary-field green-bg">Project Scope</td>
+                        <td><input type="text" id="project-scope" name="project-scope"></td>
+                    </tr>
+                    <tr>
+                        <td class="summary-field">R&D Location</td>
+                        <td><input type="text" id="r-d-location" name="r-d-location"></td>
+                    </tr>
+                    <tr>
+                        <td class="summary-field">Production Location</td>
+                        <td><input type="text" id="production-location" name="production-location"></td>
+                    </tr>
+                    <tr>
+                        <td class="summary-field">ASIL Classification</td>
+                        <td><input type="text" id="asil-classification" name="asil-classification"></td>
+                    </tr>
+                    <tr>
+                        <td class="summary-field green-bg">Volume</td>
+                        <td><input type="text" id="volume" name="volume"></td>
+                    </tr>
+                    <tr>
+                        <td class="summary-field">Peak Volume</td>
+                        <td><input type="text" id="peak-volume" name="peak-volume"></td>
+                    </tr>
+                    <tr>
+                        <td class="summary-field">Schaeffler SOP</td>
+                        <td><input type="text" id="schaeffler-sop" name="schaeffler-sop"></td>
+                    </tr>
+                </table>
+                
+            </form>
+        </div>
+    </div>
+    <script>
+        function previewImage(input) {
+            var preview = document.getElementById('image-preview');
+            var file = input.files[0];
+            var reader = new FileReader();
+        
+            reader.onload = function() {
+                preview.src = reader.result;
+            };
+        
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+
+</html>

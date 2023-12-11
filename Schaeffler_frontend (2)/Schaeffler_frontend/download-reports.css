@@ -1,0 +1,58 @@
+/* Reset some default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    background-color: #4CAF50; /* Green color */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the main content section */
+main {
+    padding: 20px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #4CAF50; /* Green color */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style the download report section */
+#download-report {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#download-report h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#download-report p {
+    margin-bottom: 20px;
+}
+
+#download-report a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green color */
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+#download-report a:hover {
+    background-color: #45A844; /* Slightly darker green on hover */
+}

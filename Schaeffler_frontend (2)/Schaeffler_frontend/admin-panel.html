@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="admin-panel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>DASHBOARD</title>
+</head>
+<body id="body">
+  <nav class="navbar">
+    <div class="sidebar__title">
+      <div class="sidebar__img">
+        <img src="schaeffler-logo.svg" />
+      </div>
+      
+    </div>
+    
+    <div class="navbar__right">
+      <a href="javascript:void(0);" onclick="loadContent('index.html')" class="check-status-link">
+        CONTRAL CENTRAL
+      </a>
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button type="submit">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </div>
+      <a href="/contact">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+      </a>
+      <a href="javascript:void(0);" onclick="downloadFile('developer_dashboard.html')" class="download-link">
+        <i class="fa fa-download" aria-hidden="true"></i>
+      </a>      
+    </div>
+  </nav>
+  <iframe id="contentFrame" style="width: 100%; height: 70%; border: none;"></iframe>
+  <script src="admin-panel.js"></script>
+
+</body>
+</html>
+

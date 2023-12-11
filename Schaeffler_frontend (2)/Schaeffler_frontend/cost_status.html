@@ -1,0 +1,119 @@
+
+<html>
+
+<head>
+    <title>Project Overview</title>
+
+
+</head>
+<link rel="stylesheet" href="cost.css">
+
+<body>
+    <header>
+        <h2>
+            < Project Number - Project Name>
+
+                <h3>Cost Overview</h3>
+        </h2>
+    </header>
+
+    <div class="content-container">
+        <div class="project-info">
+
+            <table id="3">
+                <tr>
+                    <th>Overall Status</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="status-container">
+                            <input type="radio" class="status-radio" name="status" id="green">
+                            <label class="status-option" for="green">
+                                <div class="status-indicator" id="green"></div>
+                            </label>
+                            <input type="radio" class="status-radio" name="status" id="yellow">
+                            <label class="status-option" for="yellow">
+                                <div class="status-indicator" id="yellow"></div>
+                            </label>
+                            <input type="radio" class="status-radio" name="status" id="red">
+                            <label class="status-option" for="red">
+                                <div class="status-indicator" id="red"></div>
+                            </label>
+
+
+                    </td>
+
+                </tr>
+            </table>
+            <table id="1">
+                <tr>
+                    <th>
+                        <div class="textarea"></div>
+                        <p>CPI</p>
+                    </th>
+                </tr>
+                <td class="input-cell" contenteditable="true" placeholder="CPI"></td>
+
+            </table>
+            <table id="2">
+                <tr>
+                    <th>
+                        <div class="key-points">
+                            <h3>Key Points</h3>
+                        </div>
+                    </th>
+                </tr>
+                <td>
+                    <ol>
+                <td class="input-cell" contenteditable="true" placeholder="1"></td>
+
+
+                </ol>
+                </td>
+            </table>
+        </div>
+
+        <div class="cost-overview">
+            <h3>Primary & Secondary Cost Overview</h3>
+        </div>
+    </div>
+    <script>
+        document.getElementById("red");
+        document.getElementById("yellow");
+        document.getElementById("green");
+
+        function loadContent(page) {
+            var contentFrame = document.getElementById("content-frame");
+            contentFrame.src = page;
+        }
+
+        function green() {
+            var green = document.getElementById("green");
+            green.style.backgroundColor = "#00ff54";
+            green.style.boxShadow = "0px 0px 10px #00ff54 ";
+
+        }
+        function yellow() {
+            var yellow = document.getElementById("yellow");
+            green.style.backgroundColor = "yellow";
+            green.style.boxShadow = "0px 0px 10px yellow ";
+
+        }
+        function red() {
+            var green = document.getElementById("red");
+            green.style.backgroundColor = "red";
+            green.style.boxShadow = "0px 0px 10px red";
+
+        }
+        green(),
+            yellow(),
+            red();
+        function changeColor(color) {
+            var element = document.getElementById(color);
+            element.style.backgroundColor = color;
+            element.style.boxShadow = `0px 0px 10px ${color}`;
+        }
+    </script>
+</body>
+
+</html>

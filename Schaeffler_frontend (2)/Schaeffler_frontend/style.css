@@ -1,0 +1,120 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('s3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin-left: 800px; /* Increase the margin-left value to move the container further to the right */
+}
+
+
+
+h2 {
+    color: #333;
+}
+
+/* Style for the form elements */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Style for the "Sign up Here" link */
+.switch-form {
+    margin-top: 10px;
+}
+
+.switch-form a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hover effect for buttons and links */
+button:hover, .switch-form a:hover {
+    opacity: 0.8;
+}
+
+/* Background styles */
+body::before {
+    content: "";
+    background-image: url('s3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.logo {
+    position: absolute;
+    top: 10px; /* Adjust the top distance as needed */
+    right: 10px; /* Adjust the right distance as needed */
+}
+
+.logo img {
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+}
+/* Style the select element */
+select[name="user-type"] {
+    width: 200px; /* Set the width to your desired size */
+    padding: 10px; /* Add padding for better spacing */
+    font-size: 16px; /* Set the font size */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Round the corners */
+    background-color: #f7f7f7; /* Set a background color */
+}
+
+/* Style the option elements */
+select[name="user-type"] option {
+    font-size: 14px; /* Set the font size for options */
+    background-color: #fff; /* Set the background color for options */
+    color: #333; /* Set the text color for options */
+    padding: 5px 10px; /* Add padding for better spacing */
+}
+
+/* Style the selected option */
+select[name="user-type"] option:checked {
+    background-color: green; /* Set a different background color for the selected option */
+    color: #fff; /* Set a different text color for the selected option */
+}

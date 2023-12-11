@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Project Team Panel - Project Status Tracking System</title>
+    <link rel="stylesheet" type="text/css" href="quality_overview.css">
+</head>
+
+<body>
+   
+    <div class="panel-container">
+        <h2> Project Number - Project Name</h2>
+        <h3>Quality Overview</h3>
+
+
+        <table id="status-table">
+        <thead>
+          <tr>
+            <th>Domain</th>
+            <th>Topic</th>
+            <th>Measures</th>
+            <th>Responsible</th>
+            <th>Due Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-domain="SYS">
+            <td>Overall Status</td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td class="status-cell">
+              <div
+                class="status-circle"
+                data-status="red"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="green"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="yellow"
+              ></div>
+            </td>
+          </tr>
+          <tr data-domain="SW">
+            <td>SW</td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td class="status-cell">
+              <div
+                class="status-circle"
+                data-status="red"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="green"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="yellow"
+              ></div>
+            </td>
+          </tr>
+          <tr data-domain="HW">
+            <td>EE</td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td class="status-cell">
+              <div
+                class="status-circle"
+                data-status="red"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="green"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="yellow"
+              ></div>
+            </td>
+          </tr>
+
+           <tr data-domain="other">
+            <td>Other</td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td contenteditable="true"></td>
+            <td class="status-cell">
+              <div
+                class="status-circle"
+                data-status="red"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="green"
+              ></div>
+              <div
+                class="status-circle"
+                data-status="yellow"
+              ></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script>
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var sysCircles = document.querySelectorAll('[data-domain="SYS"] .status-circle');
+    var swCircles = document.querySelectorAll('[data-domain="SW"] .status-circle');
+    var hwCircles = document.querySelectorAll('[data-domain="HW"] .status-circle');
+    var otherCircles = document.querySelectorAll('[data-domain="other"] .status-circle');
+
+    function resetCircles(circles) {
+        circles.forEach(function (circle) {
+            circle.style.backgroundColor = ''; // Set background color to empty (default)
+        });
+    }
+
+    function handleCircleClick(circles) {
+        circles.forEach(function (circle) {
+            circle.addEventListener('click', function () {
+                resetCircles(circles); // Reset all circles within the same domain
+
+                // Set the clicked circle to be filled with color
+                switch (circle.getAttribute('data-status')) {
+                    case 'red':
+                        circle.style.backgroundColor = 'red';
+                        break;
+                    case 'green':
+                        circle.style.backgroundColor = 'green';
+                        break;
+                    case 'yellow':
+                        circle.style.backgroundColor = 'yellow';
+                        break;
+                }
+            });
+        });
+    }
+
+    handleCircleClick(sysCircles);
+    handleCircleClick(swCircles);
+    handleCircleClick(hwCircles);
+    handleCircleClick(otherCircles);
+});
+
+    </script>
+</body>
+
+</html>

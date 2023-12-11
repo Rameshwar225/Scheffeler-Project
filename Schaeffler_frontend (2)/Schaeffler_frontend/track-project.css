@@ -1,0 +1,99 @@
+/* Reset some default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the main content section */
+main {
+    padding: 20px;
+}
+
+/* Style the footer */
+footer {
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style the track project form */
+#track-form {
+    margin-top: 20px;
+}
+
+#track-form h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#track-form form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#track-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+#track-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+#search-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+#search-button:hover {
+    background-color: #45A844;
+}
+
+/* Style the search results section */
+#search-results {
+    margin-top: 20px;
+}
+
+#search-results h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+#search-results ul {
+    list-style: none;
+    padding: 0;
+}
+
+#search-results ul li {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}

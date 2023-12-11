@@ -1,0 +1,39 @@
+
+/* cover-page.css */
+
+.image {
+    text-align: center; /* Center the image horizontally */
+}
+
+.image img {
+    width: 1120px; /* Set a specific width, adjust as needed */
+    height: 350px; /* Set a specific height, adjust as needed */
+    display: block; /* Remove any extra spacing around the image */
+    margin: 0 auto; /* Center the image horizontally within its container */
+}
+/* cover-page.css */
+
+h2 {
+    color: green; /* Set the text color to green */
+    font-family: "Arial", sans-serif;
+}
+/* cover-page.css */
+
+h3 {
+    font-family: "Arial", sans-serif; /* Set the font family to Arial, with a fallback of sans-serif */
+}
+/* cover-page.css */
+
+h4 {
+    font-family: "Arial", sans-serif;
+}
+
+h4::before {
+    content: "Date;"; /* Add "Date: " before the text */
+    color: green; /* Set the color for "Date" to green */
+}
+
+h4::after {
+    content: " STSIPL"; /* Add "STSIPL" after the text */
+    color: black; /* Set the color for "STSIPL" to black */
+}

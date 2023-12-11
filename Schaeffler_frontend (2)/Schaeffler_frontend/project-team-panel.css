@@ -1,0 +1,135 @@
+/* Reset some default styles */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+/*  styling scrollbars  */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.panel-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 800px;
+}
+
+.panel-container h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.status-light {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.green { background-color: green; }
+.yellow { background-color: yellow; }
+.red { background-color: red; }
+
+.status-light:hover {
+    transform: scale(1.2);
+}
+
+.topic-input, .measures-input, .due-date-input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.status-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+
+/* Base styles for the status bullet points */
+.status-light {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    border-radius: 50%; /* Makes them circular */
+    display: inline-block;
+    margin-right: 2px; /* Spacing between bullet points */
+}
+
+/* Styles for the overall status bullet points */
+.overall-status .status-light {
+    width: 40px; /* Increase the width to make them bigger */
+    height: 40px; /* Increase the height to make them bigger */
+}
+
+
+
+/* Increase the size of radio buttons */
+input[type="radio"] {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+}
+

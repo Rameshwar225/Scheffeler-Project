@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Developer Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="developer_dashboard.css">
+    <script>
+        function loadContent(page) {
+            var contentFrame = document.getElementById("content-frame");
+            contentFrame.src = page;
+        }
+    </script>
+    <img src="" alt="">
+</head>
+
+<body>
+    
+
+    <div class="container">
+        <div class="dashboard">
+            <h1>Project Team</h1>
+            <ul class="options">
+                <hr>
+                <li><a href="javascript:void(0);" onclick="loadContent('cover-page.html')">Cover Page</a></li>
+                <hr>
+                <li><a href="javascript:void(0);" onclick="loadContent('project_master_data.html')">Project Master
+                        Data</a></li>
+                <hr>
+                <li><a href="javascript:void(0);" onclick="loadContent('development_maturity_1.html')">Development
+                        Maturity (1/2)</a></li>
+                <hr>
+                <li><a href="javascript:void(0);" onclick="loadContent('development_maturity_2.html')">Development
+                        Maturity (2/2)</a></li>
+                <hr>
+                <li><a href="javascript:void(0);" onclick="loadContent('quality_overview.html')">Quality Overview</a>
+                </li>
+                <hr>
+                <li><a href="javascript:void(0);" onclick="loadContent('time_status.html')">Time Status</a></li>
+                <hr>
+                <li><a href="javascript:void(0);" onclick="loadContent('cost_status.html')">Cost Status</a></li>
+                <hr>
+                <li><a href="javascript:void(0);" onclick="loadContent('risk_overview.html')">Risk Overview</a></li>
+            </ul>
+            <hr>
+        </div>
+
+        <div class="content">
+            <iframe id="content-frame" src="cover-page.html"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

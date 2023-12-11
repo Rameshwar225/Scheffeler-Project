@@ -1,0 +1,99 @@
+h2 {
+    font-family: Arial, sans-serif;
+    color: green;
+}
+
+.navbar {
+    background-color: lightgrey;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a.left {
+    flex: 1;
+    background-color: green; /* Background color for the "Project" link */
+}
+
+.navbar a.centered {
+    flex: 1;
+    background-color: green; /* Background color for the "Responsible" link */
+}
+
+.navbar a.right {
+    flex: 1;
+    background-color: green; /* Background color for the "Date" link */
+}
+
+.important-points-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+    border: 1px solid #ccc;
+}
+
+.important-points-table th {
+    background-color: lightgrey;
+    text-align: center;
+    padding: 20px; /* Increase the header cell's padding for more height */
+}
+
+.important-points-table td {
+    padding: 20px; /* Increase the cell padding for more height */
+    border: 1px solid #ccc;
+}
+
+.important-points-table input[type="text"] {
+    width: 100%;
+    padding: 10px; /* Increase the input element's padding for more height */
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.timing {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 20px;
+    text-align: center;
+}
+
+.timing caption {
+    background-color: lightgrey;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+.timing td {
+    padding: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.timing input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Optional: Add some spacing to the input elements */
+.important-points-table input[type="text"] {
+    margin-top: 10px;
+}
+
+/* Optional: Style the input elements when they are focused (clicked) */
+.important-points-table input[type="text"]:focus, .timing input[type="text"]:focus {
+    outline: none;
+    border-color: #007BFF; /* Change the border color when focused */
+}
