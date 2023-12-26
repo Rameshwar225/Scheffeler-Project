@@ -50,31 +50,6 @@ public class ProjectController {
         return new ResponseEntity<>(newProject, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Project> updateProject(@PathVariable Long id, @RequestBody Project projectDetails) {
-        Optional<Project> optionalProject = projectRepository.findById(id);
-        if (optionalProject.isPresent()) {
-            Project existingProject = optionalProject.get();
-            // Update fields if needed
-            existingProject.setProjectName(projectDetails.getProjectName());
-            existingProject.setProjectClassification(projectDetails.getProjectClassification());
-            // Update other fields similarly
+    
 
-            Project updatedProject = projectRepository.save(existingProject);
-            return new ResponseEntity<>(updatedProject, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteProject(@PathVariable Long id) {
-        Optional<Project> project = projectRepository.findById(id);
-        if (project.isPresent()) {
-            projectRepository.deleteById(id);
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
 }
